@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>{{titulo}}</ion-title>
+    <ion-button slot="start" color="medium">
+      <ion-back-button defaultHref="/restaurantes" />
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-input placeholder="{{holder_nombre}}" type="text" #nombre></ion-input>
+        <ion-input placeholder="{{holder_logotipo}}" type="text" #logotipo></ion-input>
+        <ion-input placeholder="{{holder_descripcion}}" type="text" #descripcion></ion-input>
+
+        <ion-list>
+          <ion-item>
+            <ion-select placeholder="{{holder_holder_tenedores}}" #tenedores>
+              <ion-select-option value=1>1</ion-select-option>
+              <ion-select-option value=2>2</ion-select-option>
+              <ion-select-option value=3>3</ion-select-option>
+              <ion-select-option value=4>4</ion-select-option>
+              <ion-select-option value=5>5</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col class="ion-text-center">
+      <ion-button color="dark" (click)="añadirRestaurante(logotipo, nombre, descripcion, tenedores)">{{guardar}}
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>
