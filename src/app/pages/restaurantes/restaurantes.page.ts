@@ -24,7 +24,7 @@ export class RestaurantesPage implements OnInit {
   }
 
   /**
-   * newRestaurante: Añadir nuevo elemento: abre formulario.
+   * newRestaurante: Añade nuevo restaurante a través de rellenar un formulario.
    */
   newRestaurante() {
     this._routerCtrl.navigate(['/restaurantes/restaurante-add'])

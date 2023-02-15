@@ -35,7 +35,9 @@ export class RestaurantesService {
       nombre: 'Cafetería',
       descripcion: 'Bar Antiguo',
       tenedores: 1,
-      comentarios: [],
+      comentarios: [
+        'Demasiado antiguo para que hayan comentarios...'
+      ],
     },
     {
       id: "4",

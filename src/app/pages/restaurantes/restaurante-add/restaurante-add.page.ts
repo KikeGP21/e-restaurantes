@@ -13,11 +13,10 @@ export class RestauranteAddPage implements OnInit {
 
   public titulo: string = "Añadir un nuevo restaurante"
   public holder_nombre: string = "Escribe el nombre del restaurante"
-  public holder_logotipo: string = "Escribe un url Http://"
+  public holder_logotipo: string = "Pega el url de la imagen del logotipo del restaurante"
   public holder_descripcion: string = "Escribe una descripción sobre el restaurante"
-  public holder_tenedores: string = "Escribe los tenedores del restaurante"
-  public guardar: String = "Guardar"
-  public restaurantes: restaurante[] = [];
+  public holder_tenedores: string = "Tenedores del restaurante:"
+  public guardar: String = "Guardar restaurante"
 
   constructor(private _restaurantesService: RestaurantesService, private _routerCtrl: Router) { }
 
@@ -25,7 +24,7 @@ export class RestauranteAddPage implements OnInit {
   }
 
   /**
-   * addRestaurante: Añade un nuevo restaurante con los valores de un formulario.
+   * addRestaurante: Añade un nuevo restaurante con los valores introducidos en un formulario.
    * @param logotipoURL 
    * @param nombre 
    * @param descripcion 

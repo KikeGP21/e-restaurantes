@@ -1,23 +1,44 @@
 <ion-header>
-  <ion-toolbar color="dark">
+  <ion-toolbar>
     <ion-title>{{titulo}}</ion-title>
-    <ion-button slot="start" color="medium">
+    <ion-button slot="start">
       <ion-back-button defaultHref="/restaurantes" />
     </ion-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="medium">
+<ion-content>
   <ion-row>
     <ion-col>
       <ion-card>
-        <ion-input placeholder="{{holder_nombre}}" type="text" #nombre></ion-input>
+
+        <ion-item>
+          <ion-label position="stacked">Nombre del restaurante</ion-label>
+          <ion-input [clearInput]="true" placeholder="{{holder_nombre}}" value="Restaurante " #nombre>
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Logotipo del restaurante</ion-label>
+          <ion-input [clearOnEdit]="true" placeholder="{{holder_logotipo}}" #logotipo></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Descripcion del restaurante</ion-label>
+          <ion-input id="Text1" [clearInput]="true" placeholder="{{holder_descripcion}}" value="El restaurantes es "
+            #descripcion></ion-input>
+        </ion-item>
+
+        <!-- <ion-input placeholder="{{holder_nombre}}" type="text" #nombre></ion-input>
         <ion-input placeholder="{{holder_logotipo}}" type="text" #logotipo></ion-input>
-        <ion-input placeholder="{{holder_descripcion}}" type="text" #descripcion></ion-input>
+        <ion-input placeholder="{{holder_descripcion}}" type="text" #descripcion>
+          <ion-label>{{holder_tenedores}}</ion-label>
+        </ion-input> -->
 
         <ion-list>
           <ion-item>
-            <ion-select placeholder="{{holder_tenedores}}" #tenedores>
+            <ion-label>{{holder_tenedores}}</ion-label>
+            <ion-select placeholder="Selecciona una opción." #tenedores>
               <ion-select-option value=1>1</ion-select-option>
               <ion-select-option value=2>2</ion-select-option>
               <ion-select-option value=3>3</ion-select-option>

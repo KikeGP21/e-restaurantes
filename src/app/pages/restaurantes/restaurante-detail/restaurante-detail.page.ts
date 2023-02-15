@@ -11,8 +11,7 @@ import { RestaurantesService } from 'src/app/services/restaurantes.service';
 export class RestauranteDetailPage implements OnInit {
 
   public restaurante: any;
-
-  public noTieneComentarios = "Todavía no hay comentarios  sobre este restaurante...";
+  public noTieneComentarios = "Todavía no hay comentarios sobre este restaurante...";
 
   constructor(private activatedRouted: ActivatedRoute, private _restaurantesService: RestaurantesService, private _router: Router,
     private _alertCtrl: AlertController) { }
@@ -25,32 +24,33 @@ export class RestauranteDetailPage implements OnInit {
     })
   }
 
-    /**
-   * deletePlace: borra el place actual y vuelve a la vista de listado de places
-   */
-    async deletePlace(){
+  /**
+ * deletePlace: borra el restaurante actual y vuelve a la vista de listado de restaurantes.
+ */
+  async deletePlace() {
 
-      const element = await this._alertCtrl.create(
-        {
-          header: "¿ Estás seguro de querrer borrar el restaurante '" + this.restaurante.nombre + "' ?",
-          message: "Ten cuidado...",
-          buttons:[
-            {
+    const element = await this._alertCtrl.create(
+      {
+        header: "¿ Estás seguro de querrer borrar el restaurante '" + this.restaurante.nombre + "' ?",
+        message: "Ten cuidado...",
+        buttons: [
+          {
             text: "Cancelar",
             role: "cancel"
           },
           {
             text: "Aceptar",
             handler: () => {
-            alert("El restaurante '" + this.restaurante.nombre + "' ha sido eliminado.")
-            this._restaurantesService.deleteRestaurante(this.restaurante.id)
-            this._router.navigate(['/restaurantes']) }
+              alert("El restaurante '" + this.restaurante.nombre + "' ha sido eliminado.")
+              this._restaurantesService.deleteRestaurante(this.restaurante.id)
+              this._router.navigate(['/restaurantes'])
+            }
           }
-          ]
-        }
-      );
-  
-      await element.present()
-    }
+        ]
+      }
+    );
+
+    await element.present()
+  }
 
 }
