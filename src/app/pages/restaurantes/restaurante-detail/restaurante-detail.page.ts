@@ -12,7 +12,7 @@ export class RestauranteDetailPage implements OnInit {
 
   public restaurante: any;
 
-  public NnoTieneComentarios = "Todavía no hay comentarios  sobre este restaurante...";
+  public noTieneComentarios = "Todavía no hay comentarios  sobre este restaurante...";
 
   constructor(private activatedRouted: ActivatedRoute, private _restaurantesService: RestaurantesService, private _router: Router,
     private _alertCtrl: AlertController) { }

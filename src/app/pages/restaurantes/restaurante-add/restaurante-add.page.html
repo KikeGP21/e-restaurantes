@@ -17,7 +17,7 @@
 
         <ion-list>
           <ion-item>
-            <ion-select placeholder="{{holder_holder_tenedores}}" #tenedores>
+            <ion-select placeholder="{{holder_tenedores}}" #tenedores>
               <ion-select-option value=1>1</ion-select-option>
               <ion-select-option value=2>2</ion-select-option>
               <ion-select-option value=3>3</ion-select-option>
@@ -33,7 +33,7 @@
 
   <ion-row>
     <ion-col class="ion-text-center">
-      <ion-button color="dark" (click)="añadirRestaurante(logotipo, nombre, descripcion, tenedores)">{{guardar}}
+      <ion-button color="dark" (click)="addRestaurante(logotipo, nombre, descripcion, tenedores)">{{guardar}}
       </ion-button>
     </ion-col>
   </ion-row>

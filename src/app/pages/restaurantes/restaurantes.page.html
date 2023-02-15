@@ -12,7 +12,7 @@
         <ion-img [src]="restaurante.logotipoURL"></ion-img>
       </ion-avatar>
 
-      <ion-label class="ion-text-right">{{restaurante.nombre}}</ion-label>
+      <ion-label style="text-align: center;">{{restaurante.nombre}}</ion-label>
 
       <ion-label slot="end" *ngIf="restaurante.tenedores == 1">
         <ion-icon name="star" />
@@ -56,4 +56,12 @@
 
     </ion-item>
   </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="dark" (click)="newRestaurante()">
+      <p>New</p>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
 </ion-content>

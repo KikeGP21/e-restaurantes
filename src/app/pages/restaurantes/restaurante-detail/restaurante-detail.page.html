@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-button slot="start">
-      <ion-back-button defaulHref="/restaurantes" />
+      <ion-back-button defaulHref="/restaurantes"></ion-back-button>
     </ion-button>
     <ion-button slot="end" color="danger" (click)="deletePlace()">
       <ion-icon name="trash-outline"></ion-icon>
@@ -13,19 +13,19 @@
 <ion-content>
   <ion-row>
     <ion-col>
-      <ion-img [src]="restaurante.logotipo" />
+      <ion-img [src]="restaurante.logotipoURL" />
     </ion-col>
   </ion-row>
 
   <ion-row>
     <ion-col>
-      <h1 class="ion-text-center">{{restaurante.nombre}}</h1>
+      <h1 class="ion-text-center"><b>{{restaurante.nombre}}</b></h1>
     </ion-col>
   </ion-row>
 
   <ion-row>
     <ion-col>
-      <h1 class="ion-text-center">{{restaurante.descripcion}}</h1>
+      <h4 class="ion-text-center">{{restaurante.descripcion}}</h4>
     </ion-col>
   </ion-row>
 
@@ -85,12 +85,12 @@
     <ion-col>
       <ion-list *ngIf="restaurante.comentarios.length > 0; else sinComentarios">
         <ion-item *ngFor="let comentario of restaurante.comentarios">
-          <ion-label style="text-align: center;">{{comentario}}</ion-label>
+          <ion-label style="text-align: center;"><i>{{comentario}}</i></ion-label>
         </ion-item>
       </ion-list>
 
       <ng-template #sinComentarios>
-        <p class="ion-text-center">{{noComentarios}}</p>
+        <p class="ion-text-center">{{noTieneComentarios}}</p>
       </ng-template>
     </ion-col>
   </ion-row>

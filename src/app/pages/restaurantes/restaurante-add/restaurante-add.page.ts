@@ -25,15 +25,14 @@ export class RestauranteAddPage implements OnInit {
   }
 
   /**
-   * añadirRestaurante: Añade un nuevo restaurante con los valores de un formulario.
+   * addRestaurante: Añade un nuevo restaurante con los valores de un formulario.
    * @param logotipoURL 
    * @param nombre 
    * @param descripcion 
    * @param tenedores 
    */
-  añadirRestaurante(logotipoURL: any, nombre: any, descripcion: any, tenedores: any) {
-    console.log(tenedores)
-    // this._restaurantesService.addRestaurante(logotipoURL.value, nombre.value, descripcion.value, tenedores.value)
-    // this._routerCtrl.navigate(['/restaurantes'])
+  addRestaurante(logotipoURL: any, nombre: any, descripcion: any, tenedores: any) {
+    this._restaurantesService.addRestaurante(logotipoURL.value, nombre.value, descripcion.value, tenedores.value)
+    this._routerCtrl.navigate(['/restaurantes'])
   }
 }
