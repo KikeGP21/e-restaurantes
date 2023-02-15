@@ -1,9 +1,16 @@
-ion-button{
-    --background: #92949c;
-    --color: white;
+ion-button {
+  --background: #92949c;
+  --color: white;
 }
 
-ion-toolbar{
-    --background: #222428;
-    --color: white;
+ion-toolbar {
+  --background: #222428;
+  --color: white;
+}
+
+ion-img {
+  width: 750px !important;
+  height: 550px !important;
+  margin: auto;
+  display: block;
 }
